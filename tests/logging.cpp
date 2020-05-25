@@ -13,7 +13,6 @@ TEST_CASE("Core Logger") {
 }
 
 TEST_CASE("Client Logger") {
-  cieo::logger::register_sink<cieo::logger::StdoutColorIconSink>();
   cieo::logger::initialize_client_logger("stdout-test");
   LCTRACE("stdout-test", "Trace msg");
   LCDEBUG("stdout-test", "Debug msg");
