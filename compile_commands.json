@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/arden/programming/Cieo/cmake-build-Debug/examples",
+  "command": "/sbin/clang++   -I/home/arden/programming/Cieo/include  -g   -Wall -Wextra -Wno-shadow -Wnon-virtual-dtor -Wno-old-style-cast -Wno-cast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wno-implicit-int-conversion -Wno-sign-conversion -Wno-sign-compare -Wnull-dereference -Wno-double-promotion -Wno-implicit-float-conversion -Wno-shorten-64-to-32 -Wno-float-conversion -Wno-unused-parameter -Wno-macro-redefined -Wformat=2 -std=gnu++17 -o CMakeFiles/simple.dir/simple.cpp.o -c /home/arden/programming/Cieo/examples/simple.cpp",
+  "file": "/home/arden/programming/Cieo/examples/simple.cpp"
+},
+{
+  "directory": "/home/arden/programming/Cieo/cmake-build-Debug/cieo",
+  "command": "/sbin/clang++  -Dcieo_shared_EXPORTS -I/home/arden/programming/Cieo/include -I/home/arden/programming/Cieo/include/cieo  -g -fPIC   -Wall -Wextra -Wno-shadow -Wnon-virtual-dtor -Wno-old-style-cast -Wno-cast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wno-implicit-int-conversion -Wno-sign-conversion -Wno-sign-compare -Wnull-dereference -Wno-double-promotion -Wno-implicit-float-conversion -Wno-shorten-64-to-32 -Wno-float-conversion -Wno-unused-parameter -Wno-macro-redefined -Wformat=2 -std=gnu++17 -o CMakeFiles/cieo-shared.dir/src/cieo.cpp.o -c /home/arden/programming/Cieo/cieo/src/cieo.cpp",
+  "file": "/home/arden/programming/Cieo/cieo/src/cieo.cpp"
+},
+{
+  "directory": "/home/arden/programming/Cieo/cmake-build-Debug/tests",
+  "command": "/sbin/clang++   -I/home/arden/programming/Cieo/tests -I/home/arden/programming/Cieo/include -I/home/arden/programming/Cieo/thirdparty/Catch2/single_include  -g   -Wall -Wextra -Wno-shadow -Wnon-virtual-dtor -Wno-old-style-cast -Wno-cast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wno-implicit-int-conversion -Wno-sign-conversion -Wno-sign-compare -Wnull-dereference -Wno-double-promotion -Wno-implicit-float-conversion -Wno-shorten-64-to-32 -Wno-float-conversion -Wno-unused-parameter -Wno-macro-redefined -Wformat=2 -std=gnu++17 -o CMakeFiles/unit-tests.dir/generic.cpp.o -c /home/arden/programming/Cieo/tests/generic.cpp",
+  "file": "/home/arden/programming/Cieo/tests/generic.cpp"
+},
+{
+  "directory": "/home/arden/programming/Cieo/cmake-build-Debug/tests",
+  "command": "/sbin/clang++   -I/home/arden/programming/Cieo/include -I/home/arden/programming/Cieo/thirdparty/Catch2/single_include  -g   -Wall -Wextra -Wno-shadow -Wnon-virtual-dtor -Wno-old-style-cast -Wno-cast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wno-implicit-int-conversion -Wno-sign-conversion -Wno-sign-compare -Wnull-dereference -Wno-double-promotion -Wno-implicit-float-conversion -Wno-shorten-64-to-32 -Wno-float-conversion -Wno-unused-parameter -Wno-macro-redefined -Wformat=2 -std=gnu++17 -o CMakeFiles/unit-tests-main.dir/main.cpp.o -c /home/arden/programming/Cieo/tests/main.cpp",
+  "file": "/home/arden/programming/Cieo/tests/main.cpp"
+}
+]
