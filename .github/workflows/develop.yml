@@ -1,0 +1,21 @@
+name: Development
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+
+jobs: 
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: clone Submodules
+        run: git submodule update --init --recursive --depth 50
+      - name: configue
+        run: cmake . -DCMAKE_BUILD_TYPE=Debug -DCIEO_BUILD_INTERACTIVE=OFF -DCIEO_BUILD_DOCS=OFF
+      - name: compile
+        run: cmake --build .
