@@ -2,19 +2,22 @@
 # DEPENDENCIES
 # ##############################################################################
 add_library(cieo-dependencies INTERFACE)
-# target_link_libraries(cieo-dependencies INTERFACE)
+target_link_libraries(
+  cieo-dependencies
+  INTERFACE spdlog
+            fmt::fmt)
 
 # ##############################################################################
 # SOURCES
 # ##############################################################################
 include(WriteCompilerDetectionHeader)
-set(SOURCES src/cieo.cpp)
-configure_file("${CIEO_SOURCE_DIR}/cieo/include/version.hpp.in"
-               "${CIEO_SOURCE_DIR}/cieo/include/version.hpp")
+set(SOURCES src/cieo.cpp src/logging.cpp)
+configure_file("${CIEO_SOURCE_DIR}/cieo/include/cieo/version.hpp.in"
+               "${CIEO_SOURCE_DIR}/cieo/include/cieo/version.hpp")
 set(CIEO_COMPILERS MSVC GNU Clang Intel AppleClang)
 write_compiler_detection_header(
   FILE
-  ${CIEO_SOURCE_DIR}/cieo/include/compiler.hpp
+  ${CIEO_SOURCE_DIR}/cieo/include/cieo/compiler.hpp
   PREFIX
   CIEO
   COMPILERS
@@ -40,8 +43,7 @@ if(CIEO_BUILD_STATIC_LIBS)
   add_library(cieo-static STATIC ${SOURCES})
   add_library(cieo::static ALIAS cieo-static)
 
-  target_include_directories(cieo-static PUBLIC ${CIEO_SOURCE_DIR}/include)
-  target_include_directories(cieo-static PRIVATE ${CIEO_SOURCE_DIR}/include/cieo)
+  target_include_directories(cieo-static PUBLIC ${CIEO_SOURCE_DIR}/cieo/include)
   set_target_properties(cieo-static PROPERTIES CXX_CLANG_TIDY "${CLANGTIDY_CMD}" CXX_CPPCHECK "${CPPCHECK_CMD}")
 
   target_link_libraries(cieo-static PUBLIC cieo-dependencies cieo-options cieo-warnings)
@@ -55,8 +57,7 @@ if(CIEO_BUILD_SHARED_LIBS)
   add_library(cieo-shared SHARED ${SOURCES})
   add_library(cieo::shared ALIAS cieo-shared)
 
-  target_include_directories(cieo-shared PUBLIC ${CIEO_SOURCE_DIR}/include)
-  target_include_directories(cieo-shared PRIVATE ${CIEO_SOURCE_DIR}/include/cieo)
+  target_include_directories(cieo-shared PUBLIC ${CIEO_SOURCE_DIR}/cieo/include)
 
   set_target_properties(cieo-shared PROPERTIES CXX_CLANG_TIDY "${CLANGTIDY_CMD}" CXX_CPPCHECK "${CPPCHECK_CMD}")
 

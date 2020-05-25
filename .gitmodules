@@ -4,3 +4,9 @@
 [submodule "thirdparty/Catch2"]
 	path = thirdparty/Catch2
 	url = https://github.com/catchorg/Catch2
+[submodule "thirdparty/spdlog"]
+	path = thirdparty/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "thirdparty/fmt"]
+	path = thirdparty/fmt
+	url = https://github.com/fmtlib/fmt
