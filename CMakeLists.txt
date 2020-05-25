@@ -3,6 +3,8 @@
 # ##############################################################################
 cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 file(READ "VERSION" CIEO_VERSION)
+execute_process(COMMAND git rev-parse --short HEAD RESULT_VARIABLE GIT_HASH_RESULT OUTPUT_VARIABLE GIT_HASH)
+STRING(REGEX REPLACE "\n" "" GIT_HASH "${GIT_HASH}")
 project(
   Cieo
   VERSION "${CIEO_VERSION}"
@@ -38,7 +40,7 @@ endif()
 # ##############################################################################
 # OPTIONS
 # ##############################################################################
-option(CIEO_BUILD_INTERACTIVE "Compiles interactive executable" ${CIEO_MAIN_PROJECT})
+# option(CIEO_BUILD_INTERACTIVE "Compiles interactive executable" ${CIEO_MAIN_PROJECT})
 option(CIEO_BUILD_DOCS "Compiles documentation" ${CIEO_MAIN_PROJECT})
 option(CIEO_BUILD_EXAMPLES "Compiles example projects" ${CIEO_MAIN_PROJECT})
 option(CIEO_BUILD_TESTS "Compiles Unit Test exectuable" ${CIEO_MAIN_PROJECT})
@@ -239,9 +241,9 @@ if(CIEO_BUILD_EXAMPLES)
 endif()
 
 # INTERACTIVE
-if(CIEO_BUILD_INTERACTIVE)
-  add_subdirectory(interactive)
-endif()
+# if(CIEO_BUILD_INTERACTIVE)
+  # add_subdirectory(interactive)
+# endif()
 
 # LIBRARY
 add_subdirectory(cieo)

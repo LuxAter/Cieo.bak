@@ -5,7 +5,8 @@ add_library(cieo-dependencies INTERFACE)
 target_link_libraries(
   cieo-dependencies
   INTERFACE spdlog
-            fmt::fmt)
+            fmt::fmt
+            units)
 
 # ##############################################################################
 # SOURCES

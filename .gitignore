@@ -1,3 +1,9 @@
+### Custom
+# Build
+build/
+# LSP
+.clangd/
+
 ### C++
 # Prerequisites
 *.d

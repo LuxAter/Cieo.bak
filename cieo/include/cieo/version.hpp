@@ -4,5 +4,6 @@
 #define CIEO_VERSION_MAJOR 0
 #define CIEO_VERSION_MINOR 1
 #define CIEO_VERSION_PATCH 0
+#define CIEO_VERSION_GIT_HASH "ffb15c8"
 
 #endif

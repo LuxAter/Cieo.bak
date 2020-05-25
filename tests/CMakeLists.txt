@@ -9,7 +9,7 @@ include(Catch)
 # ##############################################################################
 # UNIT-TESTS
 # ##############################################################################
-set(UNITTEST_SOURCE logging.cpp)
+set(UNITTEST_SOURCE logging.cpp units.cpp)
 
 add_executable(unit-tests ${UNITTEST_SOURCE})
 target_include_directories(unit-tests PUBLIC ${CIEO_SOURCE_DIR}/tests)

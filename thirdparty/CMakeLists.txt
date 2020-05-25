@@ -43,9 +43,10 @@ set(SPDLOG_ENABLE_PCH ${CIEO_ENABLE_PCH} CACHE BOOL "")
 
 # set(BUILD_TESTING OFF)
 
-load_submodule(spdlog)
-load_submodule(fmt)
 load_submodule(Catch2)
+load_submodule(fmt)
+load_submodule(spdlog)
+load_submodule(units)
 # load_submodule(openexr)
 # load_submodule(filesystem)
 

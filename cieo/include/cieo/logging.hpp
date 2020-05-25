@@ -210,6 +210,10 @@ bool terminate_client_logger(const std::string &name);
 std::shared_ptr<spdlog::logger> get_core();
 std::shared_ptr<spdlog::logger> get_client(const std::string &name);
 
+void log_os();
+void log_compiler();
+void log_version();
+
 } // namespace logger
 } // namespace cieo
 
