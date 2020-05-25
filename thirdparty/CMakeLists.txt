@@ -25,9 +25,8 @@ endmacro()
 # ##############################################################################
 # DEPENDENCIES
 # ##############################################################################
-# set(SPDLOG_BUILD_SHARED
-    # ${SPECULA_BUILD_SHARED_LIBS}
-    # CACHE BOOL "")
+set(SPDLOG_BUILD_SHARED ${CIEO_BUILD_SHARED_LIBS} CACHE BOOL "")
+set(SPDLOG_ENABLE_PCH ${CIEO_ENABLE_PCH} CACHE BOOL "")
 
 # set(PYILMBASE_ENABLE
     # OFF
@@ -44,8 +43,8 @@ endmacro()
 
 # set(BUILD_TESTING OFF)
 
-# load_submodule(spdlog)
-# load_submodule(fmt)
+load_submodule(spdlog)
+load_submodule(fmt)
 load_submodule(Catch2)
 # load_submodule(openexr)
 # load_submodule(filesystem)
